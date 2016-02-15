@@ -1,6 +1,6 @@
 /* =============================================================================
  * RegexRenamer                                     Copyright (c) 2011 Xiperware
- * http://regexrenamer.sourceforge.net/                      xiperware@gmail.com
+ * https://github.com/Sukram21/RegexRenamer/                      sukram.mueller@gmail.com
  * 
  * This program is free software; you can redistribute it and/or modify it under
  * the terms of the GNU General Public License v2, as published by the Free
@@ -231,54 +231,54 @@ namespace RegexRenamer
             this.miRegexMatchMatchNonDigit,
             this.miRegexMatchMatchNonAlpha,
             this.miRegexMatchMatchNonSpace} );
-      this.miRegexMatchMatch.Text = "Match";
+      this.miRegexMatchMatch.Text = "Finden";
       // 
       // miRegexMatchMatchSingleChar
       // 
       this.miRegexMatchMatchSingleChar.Index = 0;
-      this.miRegexMatchMatchSingleChar.Text = "Single character\t.";
+      this.miRegexMatchMatchSingleChar.Text = "Einzelnes Zeichen\t.";
       this.miRegexMatchMatchSingleChar.Click += new System.EventHandler( this.InsertRegexFragment );
       // 
       // miRegexMatchMatchDigit
       // 
       this.miRegexMatchMatchDigit.Index = 1;
-      this.miRegexMatchMatchDigit.Text = "Digit\t\\d";
+      this.miRegexMatchMatchDigit.Text = "Ziffer\t\\d";
       this.miRegexMatchMatchDigit.Click += new System.EventHandler( this.InsertRegexFragment );
       // 
       // miRegexMatchMatchAlpha
       // 
       this.miRegexMatchMatchAlpha.Index = 2;
-      this.miRegexMatchMatchAlpha.Text = "Alphanumeric\t\\w";
+      this.miRegexMatchMatchAlpha.Text = "Alphanumerisch\t\\w";
       this.miRegexMatchMatchAlpha.Click += new System.EventHandler( this.InsertRegexFragment );
       // 
       // miRegexMatchMatchSpace
       // 
       this.miRegexMatchMatchSpace.Index = 3;
-      this.miRegexMatchMatchSpace.Text = "Space\t\\s";
+      this.miRegexMatchMatchSpace.Text = "Leerzeichen\t\\s";
       this.miRegexMatchMatchSpace.Click += new System.EventHandler( this.InsertRegexFragment );
       // 
       // miRegexMatchMatchMultiChar
       // 
       this.miRegexMatchMatchMultiChar.Index = 4;
-      this.miRegexMatchMatchMultiChar.Text = "Multiple characters\t.*";
+      this.miRegexMatchMatchMultiChar.Text = "Mehrere Zeichen\t.*";
       this.miRegexMatchMatchMultiChar.Click += new System.EventHandler( this.InsertRegexFragment );
       // 
       // miRegexMatchMatchNonDigit
       // 
       this.miRegexMatchMatchNonDigit.Index = 5;
-      this.miRegexMatchMatchNonDigit.Text = "Non-digit\t\\D";
+      this.miRegexMatchMatchNonDigit.Text = "Nicht-Ziffer\t\\D";
       this.miRegexMatchMatchNonDigit.Click += new System.EventHandler( this.InsertRegexFragment );
       // 
       // miRegexMatchMatchNonAlpha
       // 
       this.miRegexMatchMatchNonAlpha.Index = 6;
-      this.miRegexMatchMatchNonAlpha.Text = "Non-alphanumeric\t\\W";
+      this.miRegexMatchMatchNonAlpha.Text = "Nicht-alphanumerisch\t\\W";
       this.miRegexMatchMatchNonAlpha.Click += new System.EventHandler( this.InsertRegexFragment );
       // 
       // miRegexMatchMatchNonSpace
       // 
       this.miRegexMatchMatchNonSpace.Index = 7;
-      this.miRegexMatchMatchNonSpace.Text = "Non-space\t\\S";
+      this.miRegexMatchMatchNonSpace.Text = "Nicht-Leerzeichen\t\\S";
       this.miRegexMatchMatchNonSpace.Click += new System.EventHandler( this.InsertRegexFragment );
       // 
       // gbFilter
@@ -307,7 +307,7 @@ namespace RegexRenamer
       this.cbFilterExclude.Name = "cbFilterExclude";
       this.cbFilterExclude.Size = new System.Drawing.Size( 12, 20 );
       this.cbFilterExclude.TabIndex = 2;
-      this.toolTip.SetToolTip( this.cbFilterExclude, "Exclude (invert filter)" );
+      this.toolTip.SetToolTip( this.cbFilterExclude, "Ausschließen (Filter invertieren)" );
       this.cbFilterExclude.UseVisualStyleBackColor = true;
       this.cbFilterExclude.CheckedChanged += new System.EventHandler( this.cbFilterExclude_CheckedChanged );
       // 
@@ -320,7 +320,7 @@ namespace RegexRenamer
       this.txtFilter.Size = new System.Drawing.Size( 60, 20 );
       this.txtFilter.TabIndex = 1;
       this.txtFilter.Text = "*.*";
-      this.toolTip.SetToolTip( this.txtFilter, "Press ENTER to apply filter" );
+      this.toolTip.SetToolTip( this.txtFilter, "ENTER drücken, um Filter anzuwenden" );
       this.txtFilter.TextChanged += new System.EventHandler( this.txtFilter_TextChanged );
       this.txtFilter.KeyDown += new System.Windows.Forms.KeyEventHandler( this.txtFilter_KeyDown );
       this.txtFilter.Leave += new System.EventHandler( this.txtFilter_Leave );
@@ -376,7 +376,7 @@ namespace RegexRenamer
       this.lblStatsHidden.Name = "lblStatsHidden";
       this.lblStatsHidden.Size = new System.Drawing.Size( 85, 12 );
       this.lblStatsHidden.TabIndex = 4;
-      this.lblStatsHidden.Text = "0 hidden";
+      this.lblStatsHidden.Text = "0 versteckt";
       // 
       // lblStatsShown
       // 
@@ -385,7 +385,7 @@ namespace RegexRenamer
       this.lblStatsShown.Name = "lblStatsShown";
       this.lblStatsShown.Size = new System.Drawing.Size( 85, 12 );
       this.lblStatsShown.TabIndex = 3;
-      this.lblStatsShown.Text = "0 shown";
+      this.lblStatsShown.Text = "0 gezeigt";
       // 
       // lblStatsFiltered
       // 
@@ -394,7 +394,7 @@ namespace RegexRenamer
       this.lblStatsFiltered.Name = "lblStatsFiltered";
       this.lblStatsFiltered.Size = new System.Drawing.Size( 85, 12 );
       this.lblStatsFiltered.TabIndex = 2;
-      this.lblStatsFiltered.Text = "0 filtered";
+      this.lblStatsFiltered.Text = "0 gefiltert";
       // 
       // lblStatsTotal
       // 
@@ -403,7 +403,7 @@ namespace RegexRenamer
       this.lblStatsTotal.Name = "lblStatsTotal";
       this.lblStatsTotal.Size = new System.Drawing.Size( 85, 12 );
       this.lblStatsTotal.TabIndex = 1;
-      this.lblStatsTotal.Text = "0 total";
+      this.lblStatsTotal.Text = "0 insgesamt";
       // 
       // lblStats
       // 
@@ -414,7 +414,7 @@ namespace RegexRenamer
       this.lblStats.Name = "lblStats";
       this.lblStats.Size = new System.Drawing.Size( 31, 13 );
       this.lblStats.TabIndex = 4;
-      this.lblStats.Text = "Stats";
+      this.lblStats.Text = "Statistiken";
       this.lblStats.MouseEnter += new System.EventHandler( this.lblStats_MouseEnter );
       this.lblStats.MouseLeave += new System.EventHandler( this.lblStats_MouseLeave );
       // 
@@ -425,7 +425,7 @@ namespace RegexRenamer
       this.lblMatch.Name = "lblMatch";
       this.lblMatch.Size = new System.Drawing.Size( 40, 13 );
       this.lblMatch.TabIndex = 0;
-      this.lblMatch.Text = "Match:";
+      this.lblMatch.Text = "Finden:";
       // 
       // lblReplace
       // 
@@ -434,7 +434,7 @@ namespace RegexRenamer
       this.lblReplace.Name = "lblReplace";
       this.lblReplace.Size = new System.Drawing.Size( 50, 13 );
       this.lblReplace.TabIndex = 0;
-      this.lblReplace.Text = "Replace:";
+      this.lblReplace.Text = "Ersetzen:";
       // 
       // cbModifierI
       // 
@@ -446,7 +446,7 @@ namespace RegexRenamer
       this.cbModifierI.TabIndex = 3;
       this.cbModifierI.Tag = false;
       this.cbModifierI.Text = "/i";
-      this.toolTip.SetToolTip( this.cbModifierI, "Ignore case" );
+      this.toolTip.SetToolTip( this.cbModifierI, "Groß- und Kleinschreibung ignorieren" );
       this.cbModifierI.UseVisualStyleBackColor = true;
       this.cbModifierI.CheckedChanged += new System.EventHandler( this.cbModifierI_CheckedChanged );
       // 
@@ -460,7 +460,7 @@ namespace RegexRenamer
       this.cbModifierG.TabIndex = 4;
       this.cbModifierG.Tag = false;
       this.cbModifierG.Text = "/g";
-      this.toolTip.SetToolTip( this.cbModifierG, "Global (match as many times as possible)" );
+      this.toolTip.SetToolTip( this.cbModifierG, "Global (finde so viele Übereinstimmungen wie möglich)" );
       this.cbModifierG.UseVisualStyleBackColor = true;
       this.cbModifierG.CheckedChanged += new System.EventHandler( this.cbModifierG_CheckedChanged );
       // 
@@ -474,7 +474,7 @@ namespace RegexRenamer
       this.cbModifierX.TabIndex = 5;
       this.cbModifierX.Tag = false;
       this.cbModifierX.Text = "/x";
-      this.toolTip.SetToolTip( this.cbModifierX, "Extended regex (ignore unescaped spaces)" );
+      this.toolTip.SetToolTip( this.cbModifierX, "Erweitertes regex (ignoriere unmaskierte Leerzeichen)" );
       this.cbModifierX.UseVisualStyleBackColor = true;
       this.cbModifierX.CheckedChanged += new System.EventHandler( this.cbModifierX_CheckedChanged );
       // 
@@ -486,7 +486,7 @@ namespace RegexRenamer
       this.txtReplace.Name = "txtReplace";
       this.txtReplace.Size = new System.Drawing.Size( 247, 20 );
       this.txtReplace.TabIndex = 2;
-      this.toolTip.SetToolTip( this.txtReplace, "Use $1, $2, ... to insert captured text" );
+      this.toolTip.SetToolTip( this.txtReplace, "Nutzen Sie $1, $2, ... um gefangenen Text einzufügen" );
       this.txtReplace.TextChanged += new System.EventHandler( this.txtReplace_TextChanged );
       this.txtReplace.KeyDown += new System.Windows.Forms.KeyEventHandler( this.txtReplace_KeyDown );
       this.txtReplace.Leave += new System.EventHandler( this.txtReplace_Leave );
@@ -501,7 +501,7 @@ namespace RegexRenamer
       this.btnNetwork.Name = "btnNetwork";
       this.btnNetwork.Size = new System.Drawing.Size( 36, 24 );
       this.btnNetwork.TabIndex = 3;
-      this.toolTip.SetToolTip( this.btnNetwork, "Browse network" );
+      this.toolTip.SetToolTip( this.btnNetwork, "Netzwerk durchsuchen" );
       this.btnNetwork.UseVisualStyleBackColor = true;
       this.btnNetwork.Click += new System.EventHandler( this.btnNetwork_Click );
       // 
@@ -513,7 +513,7 @@ namespace RegexRenamer
       this.txtPath.Name = "txtPath";
       this.txtPath.Size = new System.Drawing.Size( 225, 20 );
       this.txtPath.TabIndex = 2;
-      this.toolTip.SetToolTip( this.txtPath, "Press ENTER to apply path" );
+      this.toolTip.SetToolTip( this.txtPath, "ENTER drücken, um Pfad anzunehmen" );
       this.txtPath.Enter += new System.EventHandler( this.txtPath_Enter );
       this.txtPath.KeyDown += new System.Windows.Forms.KeyEventHandler( this.txtPath_KeyDown );
       this.txtPath.Leave += new System.EventHandler( this.txtPath_Leave );
@@ -529,7 +529,7 @@ namespace RegexRenamer
       this.lblNumMatched.TabIndex = 4;
       this.lblNumMatched.Text = "0";
       this.lblNumMatched.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-      this.toolTip.SetToolTip( this.lblNumMatched, "Number of matches" );
+      this.toolTip.SetToolTip( this.lblNumMatched, "Anzahl der Übereinstimmungen" );
       // 
       // lblNumConflict
       // 
@@ -542,7 +542,7 @@ namespace RegexRenamer
       this.lblNumConflict.TabIndex = 5;
       this.lblNumConflict.Text = "0";
       this.lblNumConflict.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-      this.toolTip.SetToolTip( this.lblNumConflict, "Number of conflicts" );
+      this.toolTip.SetToolTip( this.lblNumConflict, "Anzahl der Konflikte" );
       // 
       // cmbMatch
       // 
@@ -552,7 +552,7 @@ namespace RegexRenamer
       this.cmbMatch.Name = "cmbMatch";
       this.cmbMatch.Size = new System.Drawing.Size( 247, 22 );
       this.cmbMatch.TabIndex = 1;
-      this.toolTip.SetToolTip( this.cmbMatch, "Shift+rightclick for a menu of regex elements" );
+      this.toolTip.SetToolTip( this.cmbMatch, "Shift+Rechtsklick, um ein Menü der regex Elemente anzuzeigen" );
       this.cmbMatch.SelectedIndexChanged += new System.EventHandler( this.cmbMatch_SelectedIndexChanged );
       this.cmbMatch.TextChanged += new System.EventHandler( this.cmbMatch_TextChanged );
       this.cmbMatch.Enter += new System.EventHandler( this.cmbMatch_Enter );
@@ -596,9 +596,9 @@ namespace RegexRenamer
       this.mnuChangeCase.Name = "mnuChangeCase";
       this.mnuChangeCase.Padding = new System.Windows.Forms.Padding( 0, 0, 8, 0 );
       this.mnuChangeCase.Size = new System.Drawing.Size( 92, 17 );
-      this.mnuChangeCase.Text = "Change Case";
+      this.mnuChangeCase.Text = "Ändere Groß- und Kleinschreibung";
       this.mnuChangeCase.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-      this.mnuChangeCase.ToolTipText = "Only the matched portion of the filename will have its case changed";
+      this.mnuChangeCase.ToolTipText = "Nur der übereinstimmende Teil des Dateinamens wird in der Groß- und Kleinschreibung geändert.";
       this.mnuChangeCase.MouseDown += new System.Windows.Forms.MouseEventHandler( this.mnuChangeCase_MouseDown );
       // 
       // itmChangeCaseNoChange
@@ -608,7 +608,7 @@ namespace RegexRenamer
       this.itmChangeCaseNoChange.Font = new System.Drawing.Font( "Tahoma", 8.25F );
       this.itmChangeCaseNoChange.Name = "itmChangeCaseNoChange";
       this.itmChangeCaseNoChange.Size = new System.Drawing.Size( 125, 22 );
-      this.itmChangeCaseNoChange.Text = "No change";
+      this.itmChangeCaseNoChange.Text = "Keine Änderung";
       this.itmChangeCaseNoChange.Click += new System.EventHandler( this.itmChangeCaseNoChange_Click );
       // 
       // itmChangeCaseSep
@@ -621,7 +621,7 @@ namespace RegexRenamer
       this.itmChangeCaseUppercase.Font = new System.Drawing.Font( "Tahoma", 8.25F );
       this.itmChangeCaseUppercase.Name = "itmChangeCaseUppercase";
       this.itmChangeCaseUppercase.Size = new System.Drawing.Size( 125, 22 );
-      this.itmChangeCaseUppercase.Text = "Uppercase";
+      this.itmChangeCaseUppercase.Text = "Alles groß";
       this.itmChangeCaseUppercase.Click += new System.EventHandler( this.itmChangeCaseUppercase_Click );
       // 
       // itmChangeCaseLowercase
@@ -629,7 +629,7 @@ namespace RegexRenamer
       this.itmChangeCaseLowercase.Font = new System.Drawing.Font( "Tahoma", 8.25F );
       this.itmChangeCaseLowercase.Name = "itmChangeCaseLowercase";
       this.itmChangeCaseLowercase.Size = new System.Drawing.Size( 125, 22 );
-      this.itmChangeCaseLowercase.Text = "Lowercase";
+      this.itmChangeCaseLowercase.Text = "Alles klein";
       this.itmChangeCaseLowercase.Click += new System.EventHandler( this.itmChangeCaseLowercase_Click );
       // 
       // itmChangeCaseTitlecase
@@ -653,9 +653,9 @@ namespace RegexRenamer
       this.mnuNumbering.Padding = new System.Windows.Forms.Padding( 0, 0, 21, 0 );
       this.mnuNumbering.Size = new System.Drawing.Size( 92, 17 );
       this.mnuNumbering.Tag = "mnuNumbering";
-      this.mnuNumbering.Text = "Numbering";
+      this.mnuNumbering.Text = "Nummerierung";
       this.mnuNumbering.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-      this.mnuNumbering.ToolTipText = "Enter \"$#\" in the replace field to insert a number sequence";
+      this.mnuNumbering.ToolTipText = "Geben Sie \"$#\" im Ersetzen-Feld an, um eine Zählsequenz einzufügen.";
       this.mnuNumbering.MouseDown += new System.Windows.Forms.MouseEventHandler( this.mnuNumbering_MouseDown );
       // 
       // txtNumberingStart
@@ -666,7 +666,7 @@ namespace RegexRenamer
       this.txtNumberingStart.Tag = true;
       this.txtNumberingStart.Text = "1";
       this.txtNumberingStart.TextBoxTextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-      this.txtNumberingStart.ToolTipText = "Starting number (or letter)";
+      this.txtNumberingStart.ToolTipText = "Startzähler (oder -buchstabe)";
       this.txtNumberingStart.TextChanged += new System.EventHandler( this.txtNumberingStart_TextChanged );
       // 
       // txtNumberingPad
@@ -677,7 +677,7 @@ namespace RegexRenamer
       this.txtNumberingPad.Tag = true;
       this.txtNumberingPad.Text = "000";
       this.txtNumberingPad.TextBoxTextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-      this.txtNumberingPad.ToolTipText = "Eg: \"0000\" means 14 => 0014";
+      this.txtNumberingPad.ToolTipText = "Beispiel: \"0000\" bewirkt, dass 14 => 0014";
       this.txtNumberingPad.TextChanged += new System.EventHandler( this.txtNumberingPad_TextChanged );
       // 
       // txtNumberingInc
@@ -688,7 +688,7 @@ namespace RegexRenamer
       this.txtNumberingInc.Tag = true;
       this.txtNumberingInc.Text = "1";
       this.txtNumberingInc.TextBoxTextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-      this.txtNumberingInc.ToolTipText = "Increment by x each file (may be negative)";
+      this.txtNumberingInc.ToolTipText = "Erhöhe den Zähler bei jeder Datei um x (kann auch negativ sein)";
       this.txtNumberingInc.TextChanged += new System.EventHandler( this.txtNumberingInc_TextChanged );
       // 
       // txtNumberingReset
@@ -699,7 +699,7 @@ namespace RegexRenamer
       this.txtNumberingReset.Tag = true;
       this.txtNumberingReset.Text = "0";
       this.txtNumberingReset.TextBoxTextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-      this.txtNumberingReset.ToolTipText = "Reset to starting number every x files";
+      this.txtNumberingReset.ToolTipText = "Setze alle x Dateien auf den Startzählen zurück";
       this.txtNumberingReset.TextChanged += new System.EventHandler( this.txtNumberingReset_TextChanged );
       // 
       // mnuMoveCopy
@@ -716,7 +716,7 @@ namespace RegexRenamer
       this.mnuMoveCopy.Name = "mnuMoveCopy";
       this.mnuMoveCopy.Padding = new System.Windows.Forms.Padding( 0, 0, 17, 0 );
       this.mnuMoveCopy.Size = new System.Drawing.Size( 92, 17 );
-      this.mnuMoveCopy.Text = "Move/Copy";
+      this.mnuMoveCopy.Text = "Verschieben/Kopieren";
       this.mnuMoveCopy.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
       this.mnuMoveCopy.MouseDown += new System.Windows.Forms.MouseEventHandler( this.mnuMoveCopy_MouseDown );
       // 
@@ -727,7 +727,7 @@ namespace RegexRenamer
       this.itmOutputRenameInPlace.Font = new System.Drawing.Font( "Tahoma", 8.25F );
       this.itmOutputRenameInPlace.Name = "itmOutputRenameInPlace";
       this.itmOutputRenameInPlace.Size = new System.Drawing.Size( 152, 22 );
-      this.itmOutputRenameInPlace.Text = "Rename in place";
+      this.itmOutputRenameInPlace.Text = "Umbennen am selben Ort";
       this.itmOutputRenameInPlace.Click += new System.EventHandler( this.itmOutputRenameInPlace_Click );
       // 
       // itmOutputSep
@@ -740,8 +740,8 @@ namespace RegexRenamer
       this.itmOutputMoveTo.Font = new System.Drawing.Font( "Tahoma", 8.25F );
       this.itmOutputMoveTo.Name = "itmOutputMoveTo";
       this.itmOutputMoveTo.Size = new System.Drawing.Size( 152, 22 );
-      this.itmOutputMoveTo.Text = "Move to...";
-      this.itmOutputMoveTo.ToolTipText = "Files that match are moved and renamed";
+      this.itmOutputMoveTo.Text = "Verschiebe nach...";
+      this.itmOutputMoveTo.ToolTipText = "Dateien, auf die das Find-Muster zutrifft, werden verschoben und umbenannt.";
       this.itmOutputMoveTo.Click += new System.EventHandler( this.itmOutputMoveTo_Click );
       // 
       // itmOutputCopyTo
@@ -749,8 +749,8 @@ namespace RegexRenamer
       this.itmOutputCopyTo.Font = new System.Drawing.Font( "Tahoma", 8.25F );
       this.itmOutputCopyTo.Name = "itmOutputCopyTo";
       this.itmOutputCopyTo.Size = new System.Drawing.Size( 152, 22 );
-      this.itmOutputCopyTo.Text = "Copy to...";
-      this.itmOutputCopyTo.ToolTipText = "Files that match are copied and the copies are renamed";
+      this.itmOutputCopyTo.Text = "Kopieren nach...";
+      this.itmOutputCopyTo.ToolTipText = "Dateien, auf die das Find-Muster zutrifft, werden kopiert. Die Kopien werden umbenannt.";
       this.itmOutputCopyTo.Click += new System.EventHandler( this.itmOutputCopyTo_Click );
       // 
       // itmOutputBackupTo
@@ -758,18 +758,18 @@ namespace RegexRenamer
       this.itmOutputBackupTo.Font = new System.Drawing.Font( "Tahoma", 8.25F );
       this.itmOutputBackupTo.Name = "itmOutputBackupTo";
       this.itmOutputBackupTo.Size = new System.Drawing.Size( 152, 22 );
-      this.itmOutputBackupTo.Text = "Backup to...";
-      this.itmOutputBackupTo.ToolTipText = "Files that match are copied and the originals are renamed";
+      this.itmOutputBackupTo.Text = "Backup nach...";
+      this.itmOutputBackupTo.ToolTipText = "Dateien, auf die das Find-Muster zutrifft, werden kopiert. Die Originale werden umbenannt.";
       this.itmOutputBackupTo.Click += new System.EventHandler( this.itmOutputBackupTo_Click );
       // 
       // ttPreviewError
       // 
       this.ttPreviewError.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Error;
-      this.ttPreviewError.ToolTipTitle = "Preview validation error";
+      this.ttPreviewError.ToolTipTitle = "Vorschau Validierungsfehler";
       // 
       // fbdNetwork
       // 
-      this.fbdNetwork.Description = "\r\n Select a network share or subfolder:";
+      this.fbdNetwork.Description = "\r\n Wählen Sie einen Netzwerkordner oder einen Unterordner aus:";
       this.fbdNetwork.ShowNewFolderButton = false;
       // 
       // cmRegexMatch
@@ -799,31 +799,31 @@ namespace RegexRenamer
       // miRegexMatchAnchorStart
       // 
       this.miRegexMatchAnchorStart.Index = 0;
-      this.miRegexMatchAnchorStart.Text = "Start\t^";
+      this.miRegexMatchAnchorStart.Text = "Beginn\t^";
       this.miRegexMatchAnchorStart.Click += new System.EventHandler( this.InsertRegexFragment );
       // 
       // miRegexMatchAnchorEnd
       // 
       this.miRegexMatchAnchorEnd.Index = 1;
-      this.miRegexMatchAnchorEnd.Text = "End\t$";
+      this.miRegexMatchAnchorEnd.Text = "Ende\t$";
       this.miRegexMatchAnchorEnd.Click += new System.EventHandler( this.InsertRegexFragment );
       // 
       // miRegexMatchAnchorStartEnd
       // 
       this.miRegexMatchAnchorStartEnd.Index = 2;
-      this.miRegexMatchAnchorStartEnd.Text = "Start and End\t^(...)$";
+      this.miRegexMatchAnchorStartEnd.Text = "Beginn und Ende\t^(...)$";
       this.miRegexMatchAnchorStartEnd.Click += new System.EventHandler( this.InsertRegexFragment );
       // 
       // miRegexMatchAnchorBound
       // 
       this.miRegexMatchAnchorBound.Index = 3;
-      this.miRegexMatchAnchorBound.Text = "Word boundary\t\\b";
+      this.miRegexMatchAnchorBound.Text = "Wortgrenze\t\\b";
       this.miRegexMatchAnchorBound.Click += new System.EventHandler( this.InsertRegexFragment );
       // 
       // miRegexMatchAnchorNonBound
       // 
       this.miRegexMatchAnchorNonBound.Index = 4;
-      this.miRegexMatchAnchorNonBound.Text = "Non-word boundary\t\\B";
+      this.miRegexMatchAnchorNonBound.Text = "Keine Wortgrenzen\t\\B";
       this.miRegexMatchAnchorNonBound.Click += new System.EventHandler( this.InsertRegexFragment );
       // 
       // miRegexMatchGroup
@@ -833,18 +833,18 @@ namespace RegexRenamer
             this.miRegexMatchGroupCapt,
             this.miRegexMatchGroupNonCapt,
             this.miRegexMatchGroupAlt} );
-      this.miRegexMatchGroup.Text = "Group";
+      this.miRegexMatchGroup.Text = "Gruppe";
       // 
       // miRegexMatchGroupCapt
       // 
       this.miRegexMatchGroupCapt.Index = 0;
-      this.miRegexMatchGroupCapt.Text = "With capture\t(...)";
+      this.miRegexMatchGroupCapt.Text = "Mit Fangen\t(...)";
       this.miRegexMatchGroupCapt.Click += new System.EventHandler( this.InsertRegexFragment );
       // 
       // miRegexMatchGroupNonCapt
       // 
       this.miRegexMatchGroupNonCapt.Index = 1;
-      this.miRegexMatchGroupNonCapt.Text = "Without capture\t(?:...)";
+      this.miRegexMatchGroupNonCapt.Text = "Ohne Fangen\t(?:...)";
       this.miRegexMatchGroupNonCapt.Click += new System.EventHandler( this.InsertRegexFragment );
       // 
       // miRegexMatchGroupAlt
@@ -871,90 +871,90 @@ namespace RegexRenamer
             this.miRegexMatchQuantExactL,
             this.miRegexMatchQuantAtLeastL,
             this.miRegexMatchQuantBetweenL} );
-      this.miRegexMatchQuant.Text = "Quantifiers";
+      this.miRegexMatchQuant.Text = "Gewichtung";
       // 
       // miRegexMatchQuantGreedy
       // 
       this.miRegexMatchQuantGreedy.Enabled = false;
       this.miRegexMatchQuantGreedy.Index = 0;
-      this.miRegexMatchQuantGreedy.Text = "Match as much as possible";
+      this.miRegexMatchQuantGreedy.Text = "Finde so viele wie möglich";
       // 
       // miRegexMatchQuantZeroOneG
       // 
       this.miRegexMatchQuantZeroOneG.Index = 1;
-      this.miRegexMatchQuantZeroOneG.Text = "Zero or one times\t?";
+      this.miRegexMatchQuantZeroOneG.Text = "Null oder einmal\t?";
       this.miRegexMatchQuantZeroOneG.Click += new System.EventHandler( this.InsertRegexFragment );
       // 
       // miRegexMatchQuantOneMoreG
       // 
       this.miRegexMatchQuantOneMoreG.Index = 2;
-      this.miRegexMatchQuantOneMoreG.Text = "One or more times\t+";
+      this.miRegexMatchQuantOneMoreG.Text = "Eins oder mehrere Male\t+";
       this.miRegexMatchQuantOneMoreG.Click += new System.EventHandler( this.InsertRegexFragment );
       // 
       // miRegexMatchQuantZeroMoreG
       // 
       this.miRegexMatchQuantZeroMoreG.Index = 3;
-      this.miRegexMatchQuantZeroMoreG.Text = "Zero or more times\t*";
+      this.miRegexMatchQuantZeroMoreG.Text = "Null oder mehrere Male\t*";
       this.miRegexMatchQuantZeroMoreG.Click += new System.EventHandler( this.InsertRegexFragment );
       // 
       // miRegexMatchQuantExactG
       // 
       this.miRegexMatchQuantExactG.Index = 4;
-      this.miRegexMatchQuantExactG.Text = "Exactly n times\t{n}";
+      this.miRegexMatchQuantExactG.Text = "Exakt n Mal\t{n}";
       this.miRegexMatchQuantExactG.Click += new System.EventHandler( this.InsertRegexFragment );
       // 
       // miRegexMatchQuantAtLeastG
       // 
       this.miRegexMatchQuantAtLeastG.Index = 5;
-      this.miRegexMatchQuantAtLeastG.Text = "At least n times\t{n,}";
+      this.miRegexMatchQuantAtLeastG.Text = "Mindestens n Mal\t{n,}";
       this.miRegexMatchQuantAtLeastG.Click += new System.EventHandler( this.InsertRegexFragment );
       // 
       // miRegexMatchQuantBetweenG
       // 
       this.miRegexMatchQuantBetweenG.Index = 6;
-      this.miRegexMatchQuantBetweenG.Text = "Between n to m times\t{n,m}";
+      this.miRegexMatchQuantBetweenG.Text = "Zwischen n und m Mal\t{n,m}";
       this.miRegexMatchQuantBetweenG.Click += new System.EventHandler( this.InsertRegexFragment );
       // 
       // miRegexMatchQuantLazy
       // 
       this.miRegexMatchQuantLazy.Enabled = false;
       this.miRegexMatchQuantLazy.Index = 7;
-      this.miRegexMatchQuantLazy.Text = "Match as little as possible";
+      this.miRegexMatchQuantLazy.Text = "So wenige wie möglich finden";
       // 
       // miRegexMatchQuantZeroOneL
       // 
       this.miRegexMatchQuantZeroOneL.Index = 8;
-      this.miRegexMatchQuantZeroOneL.Text = "Zero or one times\t??";
+      this.miRegexMatchQuantZeroOneL.Text = "Null oder ein Mal\t??";
       this.miRegexMatchQuantZeroOneL.Click += new System.EventHandler( this.InsertRegexFragment );
       // 
       // miRegexMatchQuantOneMoreL
       // 
       this.miRegexMatchQuantOneMoreL.Index = 9;
-      this.miRegexMatchQuantOneMoreL.Text = "One or more times\t+?";
+      this.miRegexMatchQuantOneMoreL.Text = "Ein oder mehr Male\t+?";
       this.miRegexMatchQuantOneMoreL.Click += new System.EventHandler( this.InsertRegexFragment );
       // 
       // miRegexMatchQuantZeroMoreL
       // 
       this.miRegexMatchQuantZeroMoreL.Index = 10;
-      this.miRegexMatchQuantZeroMoreL.Text = "Zero or more times\t*?";
+      this.miRegexMatchQuantZeroMoreL.Text = "Null oder mehr Male\t*?";
       this.miRegexMatchQuantZeroMoreL.Click += new System.EventHandler( this.InsertRegexFragment );
       // 
       // miRegexMatchQuantExactL
       // 
       this.miRegexMatchQuantExactL.Index = 11;
-      this.miRegexMatchQuantExactL.Text = "Exactly n times\t{n}?";
+      this.miRegexMatchQuantExactL.Text = "Exakt n Mal\t{n}?";
       this.miRegexMatchQuantExactL.Click += new System.EventHandler( this.InsertRegexFragment );
       // 
       // miRegexMatchQuantAtLeastL
       // 
       this.miRegexMatchQuantAtLeastL.Index = 12;
-      this.miRegexMatchQuantAtLeastL.Text = "At least n times\t{n,}?";
+      this.miRegexMatchQuantAtLeastL.Text = "Mindestens n Mal\t{n,}?";
       this.miRegexMatchQuantAtLeastL.Click += new System.EventHandler( this.InsertRegexFragment );
       // 
       // miRegexMatchQuantBetweenL
       // 
       this.miRegexMatchQuantBetweenL.Index = 13;
-      this.miRegexMatchQuantBetweenL.Text = "Between n to m times\t{n,m}?";
+      this.miRegexMatchQuantBetweenL.Text = "Zwischen n und m Mal\t{n,m}?";
       this.miRegexMatchQuantBetweenL.Click += new System.EventHandler( this.InsertRegexFragment );
       // 
       // miRegexMatchClass
@@ -965,30 +965,30 @@ namespace RegexRenamer
             this.miRegexMatchClassNeg,
             this.miRegexMatchClassLower,
             this.miRegexMatchClassUpper} );
-      this.miRegexMatchClass.Text = "Character class";
+      this.miRegexMatchClass.Text = "Buchstaben-Klasse";
       // 
       // miRegexMatchClassPos
       // 
       this.miRegexMatchClassPos.Index = 0;
-      this.miRegexMatchClassPos.Text = "Positive class\t[...]";
+      this.miRegexMatchClassPos.Text = "Positive Klasse\t[...]";
       this.miRegexMatchClassPos.Click += new System.EventHandler( this.InsertRegexFragment );
       // 
       // miRegexMatchClassNeg
       // 
       this.miRegexMatchClassNeg.Index = 1;
-      this.miRegexMatchClassNeg.Text = "Negative class\t[^...]";
+      this.miRegexMatchClassNeg.Text = "Negative Klasse\t[^...]";
       this.miRegexMatchClassNeg.Click += new System.EventHandler( this.InsertRegexFragment );
       // 
       // miRegexMatchClassLower
       // 
       this.miRegexMatchClassLower.Index = 2;
-      this.miRegexMatchClassLower.Text = "Lowercase\t[a-z]";
+      this.miRegexMatchClassLower.Text = "Kleinschreibung\t[a-z]";
       this.miRegexMatchClassLower.Click += new System.EventHandler( this.InsertRegexFragment );
       // 
       // miRegexMatchClassUpper
       // 
       this.miRegexMatchClassUpper.Index = 3;
-      this.miRegexMatchClassUpper.Text = "Uppercase\t[A-Z]";
+      this.miRegexMatchClassUpper.Text = "Großschreibung\t[A-Z]";
       this.miRegexMatchClassUpper.Click += new System.EventHandler( this.InsertRegexFragment );
       // 
       // miRegexMatchCapt
@@ -999,30 +999,30 @@ namespace RegexRenamer
             this.miRegexMatchCaptMatchUnnamed,
             this.miRegexMatchCaptCreateNamed,
             this.miRegexMatchCaptMatchNamed} );
-      this.miRegexMatchCapt.Text = "Captures";
+      this.miRegexMatchCapt.Text = "Fänge";
       // 
       // miRegexMatchCaptCreateUnnamed
       // 
       this.miRegexMatchCaptCreateUnnamed.Index = 0;
-      this.miRegexMatchCaptCreateUnnamed.Text = "Create unnamed capture\t(...)";
+      this.miRegexMatchCaptCreateUnnamed.Text = "Einen unbenannten Fang erstellen\t(...)";
       this.miRegexMatchCaptCreateUnnamed.Click += new System.EventHandler( this.InsertRegexFragment );
       // 
       // miRegexMatchCaptMatchUnnamed
       // 
       this.miRegexMatchCaptMatchUnnamed.Index = 1;
-      this.miRegexMatchCaptMatchUnnamed.Text = "Match unnamed capture\t\\n";
+      this.miRegexMatchCaptMatchUnnamed.Text = "Auf einen unbenannten Fang zutreffen\t\\n";
       this.miRegexMatchCaptMatchUnnamed.Click += new System.EventHandler( this.InsertRegexFragment );
       // 
       // miRegexMatchCaptCreateNamed
       // 
       this.miRegexMatchCaptCreateNamed.Index = 2;
-      this.miRegexMatchCaptCreateNamed.Text = "Create named capture\t(?<name>...)";
+      this.miRegexMatchCaptCreateNamed.Text = "Benannten Fang erstellen\t(?<name>...)";
       this.miRegexMatchCaptCreateNamed.Click += new System.EventHandler( this.InsertRegexFragment );
       // 
       // miRegexMatchCaptMatchNamed
       // 
       this.miRegexMatchCaptMatchNamed.Index = 3;
-      this.miRegexMatchCaptMatchNamed.Text = "Match named capture\t\\<name>";
+      this.miRegexMatchCaptMatchNamed.Text = "Auf einen benannten Fang zutreffen\t\\<name>";
       this.miRegexMatchCaptMatchNamed.Click += new System.EventHandler( this.InsertRegexFragment );
       // 
       // miRegexMatchLook
@@ -1038,25 +1038,25 @@ namespace RegexRenamer
       // miRegexMatchLookPosAhead
       // 
       this.miRegexMatchLookPosAhead.Index = 0;
-      this.miRegexMatchLookPosAhead.Text = "Positive lookahead\t(?=...)";
+      this.miRegexMatchLookPosAhead.Text = "Positiver lookahead\t(?=...)";
       this.miRegexMatchLookPosAhead.Click += new System.EventHandler( this.InsertRegexFragment );
       // 
       // miRegexMatchLookNegAhead
       // 
       this.miRegexMatchLookNegAhead.Index = 1;
-      this.miRegexMatchLookNegAhead.Text = "Negative lookahead\t(?!...)";
+      this.miRegexMatchLookNegAhead.Text = "Negativer lookahead\t(?!...)";
       this.miRegexMatchLookNegAhead.Click += new System.EventHandler( this.InsertRegexFragment );
       // 
       // miRegexMatchLookPosBehind
       // 
       this.miRegexMatchLookPosBehind.Index = 2;
-      this.miRegexMatchLookPosBehind.Text = "Positive lookbehind\t(?<=...)";
+      this.miRegexMatchLookPosBehind.Text = "Positiver lookbehind\t(?<=...)";
       this.miRegexMatchLookPosBehind.Click += new System.EventHandler( this.InsertRegexFragment );
       // 
       // miRegexMatchLookNegBehind
       // 
       this.miRegexMatchLookNegBehind.Index = 3;
-      this.miRegexMatchLookNegBehind.Text = "Negative lookbehind\t(?<!...)";
+      this.miRegexMatchLookNegBehind.Text = "Negativer lookbehind\t(?<!...)";
       this.miRegexMatchLookNegBehind.Click += new System.EventHandler( this.InsertRegexFragment );
       // 
       // miRegexMatchSep1
@@ -1082,30 +1082,30 @@ namespace RegexRenamer
             this.miRegexMatchLiteralOpenCurly,
             this.miRegexMatchLiteralCloseCurly,
             this.miRegexMatchLiteralPipe} );
-      this.miRegexMatchLiteral.Text = "Literals";
+      this.miRegexMatchLiteral.Text = "Zeichen";
       // 
       // miRegexMatchLiteralDot
       // 
       this.miRegexMatchLiteralDot.Index = 0;
-      this.miRegexMatchLiteralDot.Text = "Dot\t\\.";
+      this.miRegexMatchLiteralDot.Text = "Punkt\t\\.";
       this.miRegexMatchLiteralDot.Click += new System.EventHandler( this.InsertRegexFragment );
       // 
       // miRegexMatchLiteralQuestion
       // 
       this.miRegexMatchLiteralQuestion.Index = 1;
-      this.miRegexMatchLiteralQuestion.Text = "Question mark\t\\?";
+      this.miRegexMatchLiteralQuestion.Text = "Fragezeichen\t\\?";
       this.miRegexMatchLiteralQuestion.Click += new System.EventHandler( this.InsertRegexFragment );
       // 
       // miRegexMatchLiteralPlus
       // 
       this.miRegexMatchLiteralPlus.Index = 2;
-      this.miRegexMatchLiteralPlus.Text = "Plus sign\t\\+";
+      this.miRegexMatchLiteralPlus.Text = "Pluszeichen\t\\+";
       this.miRegexMatchLiteralPlus.Click += new System.EventHandler( this.InsertRegexFragment );
       // 
       // miRegexMatchLiteralStar
       // 
       this.miRegexMatchLiteralStar.Index = 3;
-      this.miRegexMatchLiteralStar.Text = "Star\t\\*";
+      this.miRegexMatchLiteralStar.Text = "Stern\t\\*";
       this.miRegexMatchLiteralStar.Click += new System.EventHandler( this.InsertRegexFragment );
       // 
       // miRegexMatchLiteralCaret
@@ -1117,7 +1117,7 @@ namespace RegexRenamer
       // miRegexMatchLiteralDollar
       // 
       this.miRegexMatchLiteralDollar.Index = 5;
-      this.miRegexMatchLiteralDollar.Text = "Dollar sign\t\\$";
+      this.miRegexMatchLiteralDollar.Text = "Dollar-Zeichen\t\\$";
       this.miRegexMatchLiteralDollar.Click += new System.EventHandler( this.InsertRegexFragment );
       // 
       // miRegexMatchLiteralBackslash
@@ -1129,43 +1129,43 @@ namespace RegexRenamer
       // miRegexMatchLiteralOpenRound
       // 
       this.miRegexMatchLiteralOpenRound.Index = 7;
-      this.miRegexMatchLiteralOpenRound.Text = "Open round bracket\t\\(";
+      this.miRegexMatchLiteralOpenRound.Text = "Öffnende runde Klammer\t\\(";
       this.miRegexMatchLiteralOpenRound.Click += new System.EventHandler( this.InsertRegexFragment );
       // 
       // miRegexMatchLiteralCloseRound
       // 
       this.miRegexMatchLiteralCloseRound.Index = 8;
-      this.miRegexMatchLiteralCloseRound.Text = "Close round bracket\t\\)";
+      this.miRegexMatchLiteralCloseRound.Text = "Schließende runde Klammer\t\\)";
       this.miRegexMatchLiteralCloseRound.Click += new System.EventHandler( this.InsertRegexFragment );
       // 
       // miRegexMatchLiteralOpenSquare
       // 
       this.miRegexMatchLiteralOpenSquare.Index = 9;
-      this.miRegexMatchLiteralOpenSquare.Text = "Open square bracket\t\\[";
+      this.miRegexMatchLiteralOpenSquare.Text = "Öffnende eckige Klammer\t\\[";
       this.miRegexMatchLiteralOpenSquare.Click += new System.EventHandler( this.InsertRegexFragment );
       // 
       // miRegexMatchLiteralCloseSquare
       // 
       this.miRegexMatchLiteralCloseSquare.Index = 10;
-      this.miRegexMatchLiteralCloseSquare.Text = "Close square bracket\t\\]";
+      this.miRegexMatchLiteralCloseSquare.Text = "Schließende eckige Klammer\t\\]";
       this.miRegexMatchLiteralCloseSquare.Click += new System.EventHandler( this.InsertRegexFragment );
       // 
       // miRegexMatchLiteralOpenCurly
       // 
       this.miRegexMatchLiteralOpenCurly.Index = 11;
-      this.miRegexMatchLiteralOpenCurly.Text = "Open curly bracket\t\\{";
+      this.miRegexMatchLiteralOpenCurly.Text = "Öffnende geschweifte Klammer\t\\{";
       this.miRegexMatchLiteralOpenCurly.Click += new System.EventHandler( this.InsertRegexFragment );
       // 
       // miRegexMatchLiteralCloseCurly
       // 
       this.miRegexMatchLiteralCloseCurly.Index = 12;
-      this.miRegexMatchLiteralCloseCurly.Text = "Close curly bracket\t\\}";
+      this.miRegexMatchLiteralCloseCurly.Text = "Schließende geschweifte Klammer\t\\}";
       this.miRegexMatchLiteralCloseCurly.Click += new System.EventHandler( this.InsertRegexFragment );
       // 
       // miRegexMatchLiteralPipe
       // 
       this.miRegexMatchLiteralPipe.Index = 13;
-      this.miRegexMatchLiteralPipe.Text = "Pipe\t\\|";
+      this.miRegexMatchLiteralPipe.Text = "Senkrechter Strich\t\\|";
       this.miRegexMatchLiteralPipe.Click += new System.EventHandler( this.InsertRegexFragment );
       // 
       // cmRegexReplace
@@ -1183,18 +1183,18 @@ namespace RegexRenamer
       this.miRegexReplaceCapture.MenuItems.AddRange( new System.Windows.Forms.MenuItem[] {
             this.miRegexReplaceCaptureUnnamed,
             this.miRegexReplaceCaptureNamed} );
-      this.miRegexReplaceCapture.Text = "Capture";
+      this.miRegexReplaceCapture.Text = "Fangen";
       // 
       // miRegexReplaceCaptureUnnamed
       // 
       this.miRegexReplaceCaptureUnnamed.Index = 0;
-      this.miRegexReplaceCaptureUnnamed.Text = "Unnamed\t$n";
+      this.miRegexReplaceCaptureUnnamed.Text = "Unbenannt\t$n";
       this.miRegexReplaceCaptureUnnamed.Click += new System.EventHandler( this.InsertRegexFragment );
       // 
       // miRegexReplaceCaptureNamed
       // 
       this.miRegexReplaceCaptureNamed.Index = 1;
-      this.miRegexReplaceCaptureNamed.Text = "Named\t${name}";
+      this.miRegexReplaceCaptureNamed.Text = "Benannt\t${name}";
       this.miRegexReplaceCaptureNamed.Click += new System.EventHandler( this.InsertRegexFragment );
       // 
       // miRegexReplaceOrig
@@ -1205,30 +1205,30 @@ namespace RegexRenamer
             this.miRegexReplaceOrigBefore,
             this.miRegexReplaceOrigAfter,
             this.miRegexReplaceOrigAll} );
-      this.miRegexReplaceOrig.Text = "Original text";
+      this.miRegexReplaceOrig.Text = "Originaltext";
       // 
       // miRegexReplaceOrigMatched
       // 
       this.miRegexReplaceOrigMatched.Index = 0;
-      this.miRegexReplaceOrigMatched.Text = "Matched text\t$0";
+      this.miRegexReplaceOrigMatched.Text = "Übereinstimmender Text\t$0";
       this.miRegexReplaceOrigMatched.Click += new System.EventHandler( this.InsertRegexFragment );
       // 
       // miRegexReplaceOrigBefore
       // 
       this.miRegexReplaceOrigBefore.Index = 1;
-      this.miRegexReplaceOrigBefore.Text = "Text before match\t$`";
+      this.miRegexReplaceOrigBefore.Text = "Text vor Übereinstimmung\t$`";
       this.miRegexReplaceOrigBefore.Click += new System.EventHandler( this.InsertRegexFragment );
       // 
       // miRegexReplaceOrigAfter
       // 
       this.miRegexReplaceOrigAfter.Index = 2;
-      this.miRegexReplaceOrigAfter.Text = "Text after match\t$\'";
+      this.miRegexReplaceOrigAfter.Text = "Text nach Übereinstimmung\t$\'";
       this.miRegexReplaceOrigAfter.Click += new System.EventHandler( this.InsertRegexFragment );
       // 
       // miRegexReplaceOrigAll
       // 
       this.miRegexReplaceOrigAll.Index = 3;
-      this.miRegexReplaceOrigAll.Text = "Original filename\t$_";
+      this.miRegexReplaceOrigAll.Text = "Original-Dateiname\t$_";
       this.miRegexReplaceOrigAll.Click += new System.EventHandler( this.InsertRegexFragment );
       // 
       // miRegexReplaceSpecial
@@ -1236,12 +1236,12 @@ namespace RegexRenamer
       this.miRegexReplaceSpecial.Index = 2;
       this.miRegexReplaceSpecial.MenuItems.AddRange( new System.Windows.Forms.MenuItem[] {
             this.miRegexReplaceSpecialNumSeq} );
-      this.miRegexReplaceSpecial.Text = "Special";
+      this.miRegexReplaceSpecial.Text = "Spezial";
       // 
       // miRegexReplaceSpecialNumSeq
       // 
       this.miRegexReplaceSpecialNumSeq.Index = 0;
-      this.miRegexReplaceSpecialNumSeq.Text = "Number sequence\t$#";
+      this.miRegexReplaceSpecialNumSeq.Text = "Zählsequenz\t$#";
       this.miRegexReplaceSpecialNumSeq.Click += new System.EventHandler( this.InsertRegexFragment );
       // 
       // miRegexReplaceSep1
@@ -1254,12 +1254,12 @@ namespace RegexRenamer
       this.miRegexReplaceLiteral.Index = 4;
       this.miRegexReplaceLiteral.MenuItems.AddRange( new System.Windows.Forms.MenuItem[] {
             this.miRegexReplaceLiteralDollar} );
-      this.miRegexReplaceLiteral.Text = "Literals";
+      this.miRegexReplaceLiteral.Text = "Zeichen";
       // 
       // miRegexReplaceLiteralDollar
       // 
       this.miRegexReplaceLiteralDollar.Index = 0;
-      this.miRegexReplaceLiteralDollar.Text = "Dollar sign\t$$";
+      this.miRegexReplaceLiteralDollar.Text = "Dollar-Zeichen\t$$";
       this.miRegexReplaceLiteralDollar.Click += new System.EventHandler( this.InsertRegexFragment );
       // 
       // cmGlobMatch
@@ -1271,13 +1271,13 @@ namespace RegexRenamer
       // miGlobMatchSingle
       // 
       this.miGlobMatchSingle.Index = 0;
-      this.miGlobMatchSingle.Text = "Single character\t?";
+      this.miGlobMatchSingle.Text = "Einzelnes Zeichen\t?";
       this.miGlobMatchSingle.Click += new System.EventHandler( this.InsertRegexFragment );
       // 
       // miGlobMatchMultiple
       // 
       this.miGlobMatchMultiple.Index = 1;
-      this.miGlobMatchMultiple.Text = "Multiple characters\t*";
+      this.miGlobMatchMultiple.Text = "Mehrere Zeichen\t*";
       this.miGlobMatchMultiple.Click += new System.EventHandler( this.InsertRegexFragment );
       // 
       // cmsBlank
@@ -1360,7 +1360,7 @@ namespace RegexRenamer
       this.lblPath.Name = "lblPath";
       this.lblPath.Size = new System.Drawing.Size( 32, 13 );
       this.lblPath.TabIndex = 0;
-      this.lblPath.Text = "Path:";
+      this.lblPath.Text = "Pfad:";
       // 
       // tvwFolders
       // 
@@ -1425,14 +1425,14 @@ namespace RegexRenamer
       // colFilename
       // 
       this.colFilename.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-      this.colFilename.HeaderText = "Filename";
+      this.colFilename.HeaderText = "Dateiname";
       this.colFilename.Name = "colFilename";
       this.colFilename.Resizable = System.Windows.Forms.DataGridViewTriState.False;
       // 
       // colPreview
       // 
       this.colPreview.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-      this.colPreview.HeaderText = "Preview";
+      this.colPreview.HeaderText = "Vorschau";
       this.colPreview.Name = "colPreview";
       this.colPreview.ReadOnly = true;
       this.colPreview.Resizable = System.Windows.Forms.DataGridViewTriState.False;
@@ -1447,7 +1447,7 @@ namespace RegexRenamer
       this.btnRename.Size = new System.Drawing.Size( 85, 24 );
       this.btnRename.State = System.Windows.Forms.VisualStyles.PushButtonState.Normal;
       this.btnRename.TabIndex = 3;
-      this.btnRename.Text = "&Rename";
+      this.btnRename.Text = "&Umbenennen";
       this.btnRename.UseVisualStyleBackColor = true;
       this.btnRename.Click += new System.EventHandler( this.btnRename_Click );
       // 
@@ -1469,7 +1469,7 @@ namespace RegexRenamer
       this.itmRenameFiles.CheckState = System.Windows.Forms.CheckState.Checked;
       this.itmRenameFiles.Name = "itmRenameFiles";
       this.itmRenameFiles.Size = new System.Drawing.Size( 129, 22 );
-      this.itmRenameFiles.Text = "Rename files";
+      this.itmRenameFiles.Text = "Dateien umbenennen";
       this.itmRenameFiles.Click += new System.EventHandler( this.itmRenameFiles_Click );
       // 
       // itmRenameFolders
@@ -1477,7 +1477,7 @@ namespace RegexRenamer
       this.itmRenameFolders.AutoSize = false;
       this.itmRenameFolders.Name = "itmRenameFolders";
       this.itmRenameFolders.Size = new System.Drawing.Size( 129, 22 );
-      this.itmRenameFolders.Text = "Rename folders";
+      this.itmRenameFolders.Text = "Ordner umbenennen";
       this.itmRenameFolders.Click += new System.EventHandler( this.itmRenameFolders_Click );
       // 
       // tsOptions
@@ -1514,7 +1514,7 @@ namespace RegexRenamer
       this.mnuOptions.Margin = new System.Windows.Forms.Padding( 0, 1, 10, 0 );
       this.mnuOptions.Name = "mnuOptions";
       this.mnuOptions.Size = new System.Drawing.Size( 57, 17 );
-      this.mnuOptions.Text = "Options";
+      this.mnuOptions.Text = "Optionen";
       this.mnuOptions.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
       // 
       // itmOptionsShowHidden
@@ -1522,7 +1522,7 @@ namespace RegexRenamer
       this.itmOptionsShowHidden.CheckOnClick = true;
       this.itmOptionsShowHidden.Name = "itmOptionsShowHidden";
       this.itmOptionsShowHidden.Size = new System.Drawing.Size( 205, 22 );
-      this.itmOptionsShowHidden.Text = "Show hidden files";
+      this.itmOptionsShowHidden.Text = "Versteckte Dateien anzeigen";
       this.itmOptionsShowHidden.Click += new System.EventHandler( this.itmOptionsShowHidden_Click );
       // 
       // itmOptionsPreserveExt
@@ -1530,7 +1530,7 @@ namespace RegexRenamer
       this.itmOptionsPreserveExt.CheckOnClick = true;
       this.itmOptionsPreserveExt.Name = "itmOptionsPreserveExt";
       this.itmOptionsPreserveExt.Size = new System.Drawing.Size( 205, 22 );
-      this.itmOptionsPreserveExt.Text = "Preserve file extension";
+      this.itmOptionsPreserveExt.Text = "Dateiendung beibehalten";
       this.itmOptionsPreserveExt.Click += new System.EventHandler( this.itmOptionsPreserveExt_Click );
       // 
       // itmOptionsRealtimePreview
@@ -1540,15 +1540,15 @@ namespace RegexRenamer
       this.itmOptionsRealtimePreview.CheckState = System.Windows.Forms.CheckState.Checked;
       this.itmOptionsRealtimePreview.Name = "itmOptionsRealtimePreview";
       this.itmOptionsRealtimePreview.Size = new System.Drawing.Size( 205, 22 );
-      this.itmOptionsRealtimePreview.Text = "Enable realtime preview";
-      this.itmOptionsRealtimePreview.ToolTipText = "When unchecked, press ENTER in the regex fields to update the preview";
+      this.itmOptionsRealtimePreview.Text = "Echtzeitvorschau aktivieren";
+      this.itmOptionsRealtimePreview.ToolTipText = "Wenn nicht aktiviert, drücken Sie einem der beiden Textfelder ENTER, um die Vorschau zu updaten";
       // 
       // itmOptionsAllowRenSub
       // 
       this.itmOptionsAllowRenSub.CheckOnClick = true;
       this.itmOptionsAllowRenSub.Name = "itmOptionsAllowRenSub";
       this.itmOptionsAllowRenSub.Size = new System.Drawing.Size( 205, 22 );
-      this.itmOptionsAllowRenSub.Text = "Allow rename to subfolders";
+      this.itmOptionsAllowRenSub.Text = "Umbenennen auch für Unterordner erlauben";
       this.itmOptionsAllowRenSub.Click += new System.EventHandler( this.itmOptionsAllowRenSub_Click );
       // 
       // itmOptionsRenameSelectedRows
@@ -1556,7 +1556,7 @@ namespace RegexRenamer
       this.itmOptionsRenameSelectedRows.CheckOnClick = true;
       this.itmOptionsRenameSelectedRows.Name = "itmOptionsRenameSelectedRows";
       this.itmOptionsRenameSelectedRows.Size = new System.Drawing.Size( 205, 22 );
-      this.itmOptionsRenameSelectedRows.Text = "Only rename selected rows";
+      this.itmOptionsRenameSelectedRows.Text = "Nur markierte Zeilen umbenennen";
       // 
       // itmOptionsRememberWinPos
       // 
@@ -1565,13 +1565,13 @@ namespace RegexRenamer
       this.itmOptionsRememberWinPos.CheckState = System.Windows.Forms.CheckState.Checked;
       this.itmOptionsRememberWinPos.Name = "itmOptionsRememberWinPos";
       this.itmOptionsRememberWinPos.Size = new System.Drawing.Size( 205, 22 );
-      this.itmOptionsRememberWinPos.Text = "Remember window position";
+      this.itmOptionsRememberWinPos.Text = "Fensterposition merken";
       // 
       // itmOptionsAddContextMenu
       // 
       this.itmOptionsAddContextMenu.Name = "itmOptionsAddContextMenu";
       this.itmOptionsAddContextMenu.Size = new System.Drawing.Size( 205, 22 );
-      this.itmOptionsAddContextMenu.Text = "Add explorer context menu";
+      this.itmOptionsAddContextMenu.Text = "Zum Explorer-Menü hinzufügen";
       this.itmOptionsAddContextMenu.Click += new System.EventHandler( this.itmOptionsAddContextMenu_Click );
       // 
       // mnuHelp
@@ -1590,7 +1590,7 @@ namespace RegexRenamer
       this.mnuHelp.Margin = new System.Windows.Forms.Padding( 0, 1, 0, 0 );
       this.mnuHelp.Name = "mnuHelp";
       this.mnuHelp.Size = new System.Drawing.Size( 41, 17 );
-      this.mnuHelp.Text = "Help";
+      this.mnuHelp.Text = "Hilfe";
       this.mnuHelp.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
       // 
       // itmHelpContents
@@ -1598,7 +1598,7 @@ namespace RegexRenamer
       this.itmHelpContents.Name = "itmHelpContents";
       this.itmHelpContents.ShortcutKeys = System.Windows.Forms.Keys.F1;
       this.itmHelpContents.Size = new System.Drawing.Size( 207, 22 );
-      this.itmHelpContents.Text = "Contents";
+      this.itmHelpContents.Text = "Inhalte";
       this.itmHelpContents.Click += new System.EventHandler( this.itmHelpContents_Click );
       // 
       // itmHelpRegexReference
@@ -1606,7 +1606,7 @@ namespace RegexRenamer
       this.itmHelpRegexReference.Name = "itmHelpRegexReference";
       this.itmHelpRegexReference.ShortcutKeys = ( (System.Windows.Forms.Keys)( ( System.Windows.Forms.Keys.Shift | System.Windows.Forms.Keys.F1 ) ) );
       this.itmHelpRegexReference.Size = new System.Drawing.Size( 207, 22 );
-      this.itmHelpRegexReference.Text = "Regex Reference";
+      this.itmHelpRegexReference.Text = "Regex Referenz";
       this.itmHelpRegexReference.Click += new System.EventHandler( this.itmHelpRegexReference_Click );
       // 
       // itmHelpSep1
@@ -1618,14 +1618,14 @@ namespace RegexRenamer
       // 
       this.itmHelpEmailAuthor.Name = "itmHelpEmailAuthor";
       this.itmHelpEmailAuthor.Size = new System.Drawing.Size( 207, 22 );
-      this.itmHelpEmailAuthor.Text = "Email the author";
+      this.itmHelpEmailAuthor.Text = "Dem Autor eine Mail schreiben";
       this.itmHelpEmailAuthor.Click += new System.EventHandler( this.itmHelpEmailAuthor_Click );
       // 
       // itmHelpReportBug
       // 
       this.itmHelpReportBug.Name = "itmHelpReportBug";
       this.itmHelpReportBug.Size = new System.Drawing.Size( 207, 22 );
-      this.itmHelpReportBug.Text = "Report a bug";
+      this.itmHelpReportBug.Text = "Einen Bug melden";
       this.itmHelpReportBug.Click += new System.EventHandler( this.itmHelpReportBug_Click );
       // 
       // itmHelpHomepage
@@ -1644,7 +1644,7 @@ namespace RegexRenamer
       // 
       this.itmHelpAbout.Name = "itmHelpAbout";
       this.itmHelpAbout.Size = new System.Drawing.Size( 207, 22 );
-      this.itmHelpAbout.Text = "About RegexRenamer";
+      this.itmHelpAbout.Text = "Über RegexRenamer";
       this.itmHelpAbout.Click += new System.EventHandler( this.itmHelpAbout_Click );
       // 
       // progressBar
@@ -1665,7 +1665,7 @@ namespace RegexRenamer
       this.btnCancel.Name = "btnCancel";
       this.btnCancel.Size = new System.Drawing.Size( 85, 24 );
       this.btnCancel.TabIndex = 3;
-      this.btnCancel.Text = "&Cancel";
+      this.btnCancel.Text = "&Abbrechen";
       this.btnCancel.UseVisualStyleBackColor = true;
       this.btnCancel.Visible = false;
       this.btnCancel.Click += new System.EventHandler( this.btnCancel_Click );

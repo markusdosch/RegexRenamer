@@ -1,2 +1,2 @@
 ### RegexRenamer
-Fork from http://regexrenamer.sourceforge.net/. Because SourceForge is bloated with adware in nowadays, I put it on GitHub.
+Fork from http://regexrenamer.sourceforge.net/. Because SourceForge is bloated with adware in nowadays, I put it on GitHub and added a German version. Right now you can either download the German or the English version, there is no language chooser.

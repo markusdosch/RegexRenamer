@@ -1,6 +1,6 @@
 /* =============================================================================
  * RegexRenamer                                     Copyright (c) 2011 Xiperware
- * http://regexrenamer.sourceforge.net/                      xiperware@gmail.com
+ * https://github.com/Sukram21/RegexRenamer/                      sukram.mueller@gmail.com
  * 
  * This program is free software; you can redistribute it and/or modify it under
  * the terms of the GNU General Public License v2, as published by the Free
@@ -179,9 +179,9 @@ namespace RegexRenamer
     public void ShowErrorDialog( string strFile )
     {
       int countTotal = countSuccess + countErrors;
-      errorDialog.Message = "The following " + ( countErrors == 1 ? "error" : "errors" )
-                          + " occured during the batch rename.\n" + countSuccess + " of " + countTotal + " " + strFile
-                          + ( countTotal == 1 ? " was" : "s were" ) + " renamed successfully.";
+      errorDialog.Message = ( countErrors == 1 ? "Der folgende Fehler" : "Die folgenden Fehler" )
+                          + " traten während der Stapel-Umbenennung auf.\n" + countSuccess + " von " + countTotal + " " + strFile
+                          + ( countTotal == 1 ? " wurde" : " wurden" ) + " erfolgreich umbenannt.";
       errorDialog.AutoSizeColumns();
       errorDialog.ShowDialog();
     }

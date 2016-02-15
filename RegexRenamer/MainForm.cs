@@ -1,6 +1,6 @@
 /* =============================================================================
  * RegexRenamer                                     Copyright (c) 2011 Xiperware
- * http://regexrenamer.sourceforge.net/                      xiperware@gmail.com
+ * https://github.com/Sukram21/RegexRenamer/                      sukram.mueller@gmail.com
  * 
  * This program is free software; you can redistribute it and/or modify it under
  * the terms of the GNU General Public License v2, as published by the Free
@@ -125,16 +125,16 @@ namespace RegexRenamer
 
         // change text "file" <=> "folder"
 
-        string oldFile     = renameFolders ? "file"     : "folder";
-        string oldFilename = renameFolders ? "filename" : "folder name";
-        string oldCapFile  = renameFolders ? "File"     : "Folder";
+        string oldFile     = renameFolders ? "Datei"     : "Ordner";
+        string oldFilename = renameFolders ? "Dateiname" : "Ordnername";
+        string oldCapFile  = renameFolders ? "Datei"     : "Ordner";
 
         mnuChangeCase.ToolTipText     = mnuChangeCase.ToolTipText.Replace( oldFilename, strFilename );
         txtNumberingInc.ToolTipText   = txtNumberingInc.ToolTipText.Replace( oldFile, strFile );
         txtNumberingReset.ToolTipText = txtNumberingReset.ToolTipText.Replace( oldFile, strFile );
         itmOutputMoveTo.ToolTipText   = itmOutputMoveTo.ToolTipText.Replace( oldCapFile, strCapFile );
-        itmOutputCopyTo.ToolTipText   = renameFolders ? "Unavailable during folder rename" : "Files that match are copied and the copies are renamed";
-        itmOutputBackupTo.ToolTipText = renameFolders ? "Unavailable during folder rename" : "Files that match are copied and the originals are renamed";
+        itmOutputCopyTo.ToolTipText   = renameFolders ? "Nicht verfügbar während Ordner-Umbenennung" : "Dateien, die übereinstimmen, werden kopiert und die Kopien umbenannt";
+        itmOutputBackupTo.ToolTipText = renameFolders ? "Nicht verfügbar während Ordner-Umbenennung" : "Dateien, die übereinstimmen, werden kopiert und die Originale werden umbenannt";
         miRegexReplaceOrigAll.Text    = miRegexReplaceOrigAll.Text.Replace( oldFilename, strFilename );
         itmOptionsShowHidden.Text     = itmOptionsShowHidden.Text.Replace( oldFile, strFile );
         colFilename.HeaderText        = strCapFilename;
@@ -148,28 +148,28 @@ namespace RegexRenamer
     {
       get
       {
-        return RenameFolders ? "folder" : "file";
+        return RenameFolders ? "Ordner" : "Datei";
       }
     }
     private string strFilename
     {
       get
       {
-        return RenameFolders ? "folder name" : "filename";
+        return RenameFolders ? "Ordnername" : "Dateiname";
       }
     }
     private string strCapFile
     {
       get
       {
-        return RenameFolders ? "Folder" : "File";
+        return RenameFolders ? "Ordner" : "Datei";
       }
     }
     private string strCapFilename
     {
       get
       {
-        return RenameFolders ? "Folder name" : "Filename";
+        return RenameFolders ? "Ordnername" : "Dateiname";
       }
     }
 
@@ -2075,14 +2075,14 @@ namespace RegexRenamer
         // update dialog text
 
         if( clickedMenuItem == itmOutputMoveTo )
-          fbdMoveCopy.Description = "During the rename operation, " + strFile + "s that match the current regex will be "
-                                  + "moved to the selected folder and renamed (if necessary).";
+          fbdMoveCopy.Description = "Während der Umbenennungsaktion werden Dateien, die mit dem aktuellen regex übereinstimmen, "
+                                  + "in den ausgwählten Ordner verschoben und umbenannt (falls nötig).";
         else if( clickedMenuItem == itmOutputCopyTo )
-          fbdMoveCopy.Description = "During the rename operation, files that match the current regex will be "
-                                  + "copied to the selected folder and the copies renamed (if necessary).";
+          fbdMoveCopy.Description = "Während the Umbenennungsaktion werden Dateien, die mit dem aktuellen regex übereinstimmen, "
+                                  + "in den ausgewählten Ordner kopiert und ihre Kopien umbenannt (falls nötig).";
         else if( clickedMenuItem == itmOutputBackupTo )
-          fbdMoveCopy.Description = "During the rename operation, files that match the current regex will be "
-                                  + "copied to the selected folder and the originals renamed (if necessary).";
+          fbdMoveCopy.Description = "Während the Umbenennungsaktion werden Dateien, die mit dem aktuellen regex übereinstimmen, "
+                                  + "in den ausgewählten Ordner kopiert und die Originale umbenannt (falls nötig).";
 
 
         // show dialog, ignore if cancelled
@@ -2108,13 +2108,13 @@ namespace RegexRenamer
 
         if( fbdMoveCopy.SelectedPath == activePath )
         {
-          string errorMessage = "This '";
-          if( clickedMenuItem == itmOutputMoveTo ) errorMessage += "Move to";
-          else if( clickedMenuItem == itmOutputCopyTo ) errorMessage += "Copy to";
-          else if( clickedMenuItem == itmOutputBackupTo ) errorMessage += "Backup to";
-          errorMessage += "' folder is the same as the currently selected folder.\r\n";
+          string errorMessage = "Dieser '";
+          if( clickedMenuItem == itmOutputMoveTo ) errorMessage += "Verschieben nach";
+          else if( clickedMenuItem == itmOutputCopyTo ) errorMessage += "Kopieren nach";
+          else if( clickedMenuItem == itmOutputBackupTo ) errorMessage += "Backup nach";
+          errorMessage += "' Ordner ist der selbe wie der aktuell ausgewählte Ordner.\r\n";
 
-          MessageBox.Show( errorMessage, "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning );
+          MessageBox.Show( errorMessage, "Warnung", MessageBoxButtons.OK, MessageBoxIcon.Warning );
         }
       }
 
@@ -2344,7 +2344,7 @@ namespace RegexRenamer
       if( !EnableUpdates ) return;
 
       if( tvwFolders.Tag != null && tvwFolders.SelectedNode == (TreeNode)tvwFolders.Tag )  // My Network Places
-        toolTip.Show( "Click to browse the network", btnNetwork, 0, btnNetwork.Height, 5000 );
+        toolTip.Show( "Hier Klicken, um das Netzwerk zu durchsuchen", btnNetwork, 0, btnNetwork.Height, 5000 );
 
       activePath = tvwFolders.GetSelectedNodePath();
       UpdateFileList();
@@ -2372,7 +2372,7 @@ namespace RegexRenamer
 
         if( !Directory.Exists( normPath ) )
         {
-          errorMessage = "Path does not exist.";
+          errorMessage = "Pfad existiert nicht.";
         }
         else if( normPath != txtPath.Text )
         {
@@ -2559,7 +2559,7 @@ namespace RegexRenamer
       string errorMessage = ValidateFilename( newFilename, false );
       if( errorMessage != null )
       {
-        MessageBox.Show( errorMessage, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error );
+        MessageBox.Show( errorMessage, "Fehler", MessageBoxButtons.OK, MessageBoxIcon.Error );
         dgvFiles.CancelEdit();
         return;
       }
@@ -2567,10 +2567,10 @@ namespace RegexRenamer
       Regex regex = new Regex( "^[ .]" );
       if( regex.IsMatch( newFilename ) && !regex.IsMatch( activeFiles[afi].Filename ) )  // now starts with [ .]
       {
-        errorMessage = "This " + strFilename + " begins with a space or a dot. While this is technically possible, Windows\n"
-                     + "normally won't let you do this as it may cause problems with other programs.\n"
+        errorMessage = "Dieser " + strFilename + " beginnt mit einem Leerzeichen oder Punkt. Das ist zwar technisch möglich, Windows\n"
+                     + "lässt dies aber normalerweise nicht zu, weil es zu Problemen mit anderen Programmen führen könnte.\n"
                      + "\n"
-                     + "Are you sure you want to continue?";
+                     + "Sie Sie sicher, dass Sie fortfahren möchten?";
 
         if( MessageBox.Show( errorMessage, "Warning", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning )
             == DialogResult.Cancel )
@@ -2592,7 +2592,7 @@ namespace RegexRenamer
       }
       catch( Exception exception )
       {
-        MessageBox.Show( exception.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error );
+        MessageBox.Show( exception.Message, "Fehler", MessageBoxButtons.OK, MessageBoxIcon.Error );
         dgvFiles.CancelEdit();
         return;
       }
@@ -2672,7 +2672,7 @@ namespace RegexRenamer
       }
       catch( Exception ex )
       {
-        MessageBox.Show( ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error );
+        MessageBox.Show( ex.Message, "Fehler", MessageBoxButtons.OK, MessageBoxIcon.Error );
       }
     }
 
@@ -2742,7 +2742,7 @@ namespace RegexRenamer
           {
             if( key != null )
             {
-              key.SetValue( "", "Rename using RegexRenamer" );
+              key.SetValue( "", "Umbenennen mit RegexRenamer" );
               key.Close();
             }
           }
@@ -2771,7 +2771,7 @@ namespace RegexRenamer
       }
       catch( Exception ex )
       {
-        MessageBox.Show( ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error );
+        MessageBox.Show( ex.Message, "Fehler", MessageBoxButtons.OK, MessageBoxIcon.Error );
       }
     }
 
@@ -2788,11 +2788,11 @@ namespace RegexRenamer
     {
       try
       {
-        Process.Start( "mailto:xiperware@gmail.com" );
+        Process.Start( "mailto:sukram.mueller@gmail.com" );
       }
       catch( Exception ex )
       {
-        MessageBox.Show( ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error );
+        MessageBox.Show( ex.Message, "Fehler", MessageBoxButtons.OK, MessageBoxIcon.Error );
       }
     }
     private void itmHelpReportBug_Click( object sender, EventArgs e )
@@ -2803,18 +2803,18 @@ namespace RegexRenamer
       }
       catch( Exception ex )
       {
-        MessageBox.Show( ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error );
+        MessageBox.Show( ex.Message, "Fehler", MessageBoxButtons.OK, MessageBoxIcon.Error );
       }
     }
     private void itmHelpHomepage_Click( object sender, EventArgs e )
     {
       try
       {
-        Process.Start( "http://regexrenamer.sourceforge.net/" );
+        Process.Start( "https://github.com/Sukram21/RegexRenamer/" );
       }
       catch( Exception ex )
       {
-        MessageBox.Show( ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error );
+        MessageBox.Show( ex.Message, "Fehler", MessageBoxButtons.OK, MessageBoxIcon.Error );
       }
     }
     private void itmHelpAbout_Click( object sender, EventArgs e )
@@ -2856,7 +2856,7 @@ namespace RegexRenamer
 
       // invalid match regex
 
-      if( !validMatch ) errorMessage = "The match regular expression in invalid.";
+      if( !validMatch ) errorMessage = "Der reguläre Ausdruck in 'Finden' ist nicht gültig.";
 
 
       // preview errors exist
@@ -2871,7 +2871,7 @@ namespace RegexRenamer
 
           if( row.Cells[2].Tag != null )
           {
-            errorMessage = "Can't rename while errors exist (highlighted in red).";
+            errorMessage = "Umbennen, während Fehler existieren, nicht möglich (rot markiert).";
             break;
           }
         }
@@ -2894,7 +2894,7 @@ namespace RegexRenamer
             filesToRename++;
         }
 
-        if( filesToRename == 0 ) errorMessage = "There are no " + strFile + "s to rename.";
+        if( filesToRename == 0 ) errorMessage = "Es gibt keine " + strFile + " umzubenennen.";
       }
 
 
@@ -2902,9 +2902,9 @@ namespace RegexRenamer
 
       if( errorMessage == null && !itmOutputRenameInPlace.Checked && !Directory.Exists( fbdMoveCopy.SelectedPath ) )
       {
-        if( itmOutputMoveTo.Checked ) errorMessage = "'Move to' folder '" + fbdMoveCopy.SelectedPath + "' is not a valid path.";
-        else if( itmOutputCopyTo.Checked ) errorMessage = "'Copy to' folder '" + fbdMoveCopy.SelectedPath + "' is not a valid path.";
-        else if( itmOutputBackupTo.Checked ) errorMessage = "'Backup to' folder '" + fbdMoveCopy.SelectedPath + "' is not a valid path.";
+        if( itmOutputMoveTo.Checked ) errorMessage = "'Verschieben nach' Ordner '" + fbdMoveCopy.SelectedPath + "' ist kein gültiger Pfad.";
+        else if( itmOutputCopyTo.Checked ) errorMessage = "'Kopieren nach' Ordner '" + fbdMoveCopy.SelectedPath + "' ist kein gültiger Pfad.";
+        else if( itmOutputBackupTo.Checked ) errorMessage = "'Backup nach' Ordner '" + fbdMoveCopy.SelectedPath + "' ist kein gültiger Pfad.";
       }
 
 
@@ -2912,9 +2912,9 @@ namespace RegexRenamer
 
       if( errorMessage == null && !itmOutputRenameInPlace.Checked && fbdMoveCopy.SelectedPath == activePath )
       {
-        if( itmOutputMoveTo.Checked ) errorMessage = "'Move to' folder is the same as the currently selected folder.";
-        else if( itmOutputCopyTo.Checked ) errorMessage = "'Copy to' folder is the same as the currently selected folder.";
-        else if( itmOutputBackupTo.Checked ) errorMessage = "'Backup to' folder is the same as the currently selected folder.";
+        if( itmOutputMoveTo.Checked ) errorMessage = "'Verschieben nach' Ordner ist der selbe wie der aktuell ausgewählte Ordner.";
+        else if( itmOutputCopyTo.Checked ) errorMessage = "'Kopieren nach' Ordner ist der selbe wie der aktuell ausgewählte Ordner.";
+        else if( itmOutputBackupTo.Checked ) errorMessage = "'Backup nach' Ordner ist der selbe wie der aktuell ausgewählte Ordner.";
       }
 
 
@@ -2922,7 +2922,7 @@ namespace RegexRenamer
 
       if( errorMessage != null )
       {
-        MessageBox.Show( errorMessage, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error );
+        MessageBox.Show( errorMessage, "Fehler", MessageBoxButtons.OK, MessageBoxIcon.Error );
         return;
       }
 
@@ -2952,12 +2952,12 @@ namespace RegexRenamer
 
       if( beginWithInvalidChars )
       {
-        errorMessage = "One or more " + strFilename + "s begin with a space or a dot. While this is technically possible, Windows\n"
-                     + "normally won't let you do this as it may cause problems with other programs.\n"
+        errorMessage = "Einer oder mehrere " + strFilename + " beginnen mit einem Leerzeichen oder Punkt. Das ist zwar technisch möglich, Windows\n"
+                     + "lässt dies aber normalerweise nicht zu, weil es zu Problemen mit anderen Programmen führen könnte.\n"
                      + "\n"
-                     + "Are you sure you want to continue?";
+                     + "Sie Sie sicher, dass Sie fortfahren möchten?";
 
-        if( MessageBox.Show( errorMessage, "Warning", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning )
+        if( MessageBox.Show( errorMessage, "Warnung", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning )
             == DialogResult.Cancel )
           return;
       }
@@ -3002,7 +3002,7 @@ namespace RegexRenamer
     private void btnCancel_Click( object sender, EventArgs e )
     {
       btnCancel.Enabled = false;
-      btnCancel.Text = "Cancelling...";
+      btnCancel.Text = "Abbrechen...";
       bgwRename.CancelAsync();
     }
 
@@ -3076,7 +3076,7 @@ namespace RegexRenamer
             {
               result.ReportError( activeFiles[afi].Name,
                                   activeFiles[afi].Preview,
-                                  "Create folder '" + newDirectory + "' failed: " + ex.Message );
+                                  "Ordnererstellung '" + newDirectory + "' fehlgeschlagen: " + ex.Message );
               continue;
             }
           }
@@ -3164,7 +3164,7 @@ namespace RegexRenamer
       btnRename.Visible = true;
       btnCancel.Enabled = false;
       btnRename.Enabled = true;
-      btnCancel.Text = "&Cancel";  // reset text
+      btnCancel.Text = "&Abbrechen";  // reset text
 
 
       // hide progress bar

@@ -1,6 +1,6 @@
 /* =============================================================================
  * RegexRenamer                                     Copyright (c) 2011 Xiperware
- * http://regexrenamer.sourceforge.net/                      xiperware@gmail.com
+ * https://github.com/Sukram21/RegexRenamer/                      sukram.mueller@gmail.com
  * 
  * This program is free software; you can redistribute it and/or modify it under
  * the terms of the GNU General Public License v2, as published by the Free
@@ -93,7 +93,7 @@ namespace RegexRenamer
       this.linkHomepage.Size = new System.Drawing.Size( 184, 13 );
       this.linkHomepage.TabIndex = 3;
       this.linkHomepage.TabStop = true;
-      this.linkHomepage.Text = "http://regexrenamer.sourceforge.net/";
+      this.linkHomepage.Text = "https://github.com/Sukram21/RegexRenamer/";
       this.linkHomepage.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler( this.linkHomepage_LinkClicked );
       // 
       // linkEmail
@@ -105,7 +105,7 @@ namespace RegexRenamer
       this.linkEmail.Size = new System.Drawing.Size( 110, 13 );
       this.linkEmail.TabIndex = 4;
       this.linkEmail.TabStop = true;
-      this.linkEmail.Text = "xiperware@gmail.com";
+      this.linkEmail.Text = "sukram.mueller@gmail.com";
       this.linkEmail.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler( this.linkEmail_LinkClicked );
       // 
       // lblStats

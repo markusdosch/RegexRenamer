@@ -1,6 +1,6 @@
 /* =============================================================================
  * RegexRenamer                                     Copyright (c) 2011 Xiperware
- * http://regexrenamer.sourceforge.net/                      xiperware@gmail.com
+ * https://github.com/Sukram21/RegexRenamer/                      sukram.mueller@gmail.com
  * 
  * This program is free software; you can redistribute it and/or modify it under
  * the terms of the GNU General Public License v2, as published by the Free
@@ -79,7 +79,7 @@ namespace RegexRenamer
     static void UnhandledException( Exception ex )
     {
       MessageBox.Show( "Congratulations, you've made RegexRenamer crash! :)\n\nCould you please press Ctrl+C "
-                     + "to copy this information and paste it in an email to xiperware@gmail.com\nalong with "
+                     + "to copy this information and paste it in an email to sukram.mueller@gmail.com\nalong with "
                      + "what you were doing at the time. This will help the developer to identify and fix "
                      + "the problem.\n\n\n" + ex, "Unhandled exception (RegexRenamer v" + Application.ProductVersion + ")",
                        MessageBoxButtons.OK, MessageBoxIcon.Error );

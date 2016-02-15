@@ -15,8 +15,8 @@
     <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>
     </AssemblyOriginatorKeyFile>
-    <ManifestCertificateThumbprint>CFEFBDA896C2BB01B239E8B08AA721CB5F4ED8C5</ManifestCertificateThumbprint>
-    <ManifestKeyFile>Xiperware.pfx</ManifestKeyFile>
+    <ManifestCertificateThumbprint>1FE51E14C62448C5AC39F87D91BE94684A1D61D8</ManifestCertificateThumbprint>
+    <ManifestKeyFile>RegexRenamer_TemporaryKey.pfx</ManifestKeyFile>
     <SignManifests>true</SignManifests>
     <IsWebBootstrapper>false</IsWebBootstrapper>
     <ApplicationIcon>icon.ico</ApplicationIcon>
@@ -109,9 +109,7 @@
     <Compile Include="About.Designer.cs">
       <DependentUpon>About.cs</DependentUpon>
     </Compile>
-    <Compile Include="Classes.cs">
-      <SubType>Component</SubType>
-    </Compile>
+    <Compile Include="Classes.cs" />
     <Compile Include="Third Party\FolderTreeView.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -178,6 +176,7 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <None Include="RegexRenamer_TemporaryKey.pfx" />
     <None Include="Resources\icon.ico" />
   </ItemGroup>
   <ItemGroup>
